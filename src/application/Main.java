@@ -24,5 +24,6 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 		System.out.println("hi guys");
+		System.out.println("hi guys from Erik"); //Test comment
 	}
 }
