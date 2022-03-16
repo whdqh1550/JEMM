@@ -26,6 +26,7 @@ public class Main extends Application {
 		launch(args);
 		System.out.println("hi guys");//thirdtest
 		System.out.println("hi guys from Erik"); //Test comment
+		System.out.println("hi guys from Erik"); //New test comment
 		System.out.println("This is Marco"); //Test comment
 	}
 }
