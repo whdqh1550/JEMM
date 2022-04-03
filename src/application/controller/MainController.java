@@ -1,6 +1,6 @@
 package application.controller;
 
-import application.FxmlLoader;
+import application.model.FxmlLoader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -27,7 +27,7 @@ public class MainController {
     @FXML
     private Button moreButton;
 
-    @FXMLs
+    @FXML
     private Button calanderButton;
 
     @FXML
@@ -45,9 +45,9 @@ public class MainController {
     
     @FXML
     void PressedBookingButton(ActionEvent event) {
-    	System.out.println("this");
-    	FxmlLoader scene = new FxmlLoader();
-    	Pane view = scene.getNewWindow("src\\Booking.fxml");
+
+    	FxmlLoader scene = new FxmlLoader(); //create fxmlLoad object
+    	Pane view = scene.getNewWindow("src/Booking.fxml"); //call getNewWindow function in object scene
     	borderPane.setCenter(view);
     }
     

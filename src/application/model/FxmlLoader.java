@@ -1,8 +1,7 @@
-package application;
+package application.model;
 
 import java.io.File;
 import java.net.URL;
-
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.Pane;
 
@@ -12,6 +11,7 @@ public class FxmlLoader {
 	public Pane getNewWindow(String filePath) {
 		try {
 			URL url = new File(filePath).toURI().toURL();
+			System.out.println(url);
 			if (url == null) {
 				throw new Exception();
 			}
