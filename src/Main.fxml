@@ -66,12 +66,12 @@
                         <Insets left="115.0" />
                      </HBox.margin>
                      <children>
-                        <Label alignment="TOP_CENTER" prefHeight="162.0" prefWidth="198.0" text="Rooms" underline="true">
+                        <Label fx:id="roomsLabel" alignment="TOP_CENTER" prefHeight="162.0" prefWidth="198.0" text="Rooms" underline="true">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" prefHeight="162.0" prefWidth="220.0" text="0">
+                        <Label fx:id="totalRoomLabel" alignment="CENTER" prefHeight="162.0" prefWidth="220.0" text="0">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -89,12 +89,12 @@
                         <Insets left="115.0" />
                      </HBox.margin>
                      <children>
-                        <Label alignment="TOP_CENTER" prefHeight="162.0" prefWidth="198.0" text="Available" underline="true">
+                        <Label fx:id="roomAvailableLabel" alignment="TOP_CENTER" prefHeight="162.0" prefWidth="198.0" text="Available" underline="true">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" prefHeight="162.0" prefWidth="220.0" text="50">
+                        <Label fx:id="availableNumLabel" alignment="CENTER" prefHeight="162.0" prefWidth="220.0" text="50">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -112,12 +112,12 @@
                         <Insets left="115.0" />
                      </HBox.margin>
                      <children>
-                        <Label alignment="TOP_CENTER" prefHeight="162.0" prefWidth="198.0" text="Unavailable" underline="true">
+                        <Label fx:id="roomUnavailableLabel" alignment="TOP_CENTER" prefHeight="162.0" prefWidth="198.0" text="Unavailable" underline="true">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" prefHeight="162.0" prefWidth="220.0" text="0">
+                        <Label fx:id="unavailableNumLabel" alignment="CENTER" prefHeight="162.0" prefWidth="220.0" text="0">
                            <font>
                               <Font size="24.0" />
                            </font>
