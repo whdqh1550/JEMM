@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import application.FxmlLoader;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -72,6 +73,11 @@ public class MainController implements Initializable{
     	FxmlLoader scene = new FxmlLoader();
     	Pane view = scene.getPane("src\\Booking.fxml");
     	borderPane.setCenter(view);
+    }
+    
+    @FXML
+    void exitProgram(ActionEvent event) {
+    	Platform.exit();
     }
     
     public void initialize(URL arg0, ResourceBundle arg1)

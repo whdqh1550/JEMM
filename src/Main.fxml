@@ -39,7 +39,7 @@
                         <Insets left="10.0" top="30.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="exitButton" mnemonicParsing="false" text="EXIT PROGRAM">
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exitProgram" text="EXIT PROGRAM">
                      <VBox.margin>
                         <Insets left="10.0" top="325.0" />
                      </VBox.margin>
