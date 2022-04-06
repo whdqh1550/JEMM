@@ -479,19 +479,15 @@ public class CalendarController implements Initializable{
 				if(i < startingDay) {
 					aCalendar.get(i).setText("");
 					dCalendar.get(i).setText("");
-					
-					
 				}
 				else if(counter > LeaptDays[month-1]) {
 					dCalendar.get(i).setText("");
 					aCalendar.get(i).setText("");
-					
 				}
 				else {
 					dCalendar.get(i).setText(""+counter);
-					
+					aCalendar.get(i).setText("testing");
 					counter++;
-					
 				}
 			}
 		}
@@ -500,24 +496,17 @@ public class CalendarController implements Initializable{
 				if(i < startingDay) {
 					dCalendar.get(i).setText("");
 					aCalendar.get(i).setText("");
-					
-					
 				}
 				else if(counter > tDays[month-1]) {
 					dCalendar.get(i).setText("");
 					aCalendar.get(i).setText("");
-					
-					
 				}
 				else {
 					dCalendar.get(i).setText(""+counter);
 					aCalendar.get(i).setText("testing");// gotta put capacity of that day.
 					counter++;// brings the date that matches with counter, cause counter is the date. 
-					
-					
 				}
-				System.out.println(i);
-				System.out.println(startingDay);
+				
 			}
 			
 		}
