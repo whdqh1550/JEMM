@@ -19,7 +19,7 @@ public class FxmlLoader {
 				view = FXMLLoader.load(url);
 			}
 			catch(Exception e){
-				System.out.println("file didnt open or doesnt exist");
+				System.out.println(e);
 			}
 			return view;
 	}
