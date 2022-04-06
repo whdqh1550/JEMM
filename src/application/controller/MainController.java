@@ -1,15 +1,12 @@
 package application.controller;
 
-<<<<<<< HEAD
+
 import application.model.FxmlLoader;
-=======
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import application.FxmlLoader;
 import javafx.application.Platform;
->>>>>>> main
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -52,18 +49,7 @@ public class MainController implements Initializable{
 
     @FXML
     private Button homeButton;
-    
-<<<<<<< HEAD
-    
-    @FXML
-    void PressedBookingButton(ActionEvent event) {
 
-    	FxmlLoader scene = new FxmlLoader(); //create fxmlLoad object
-    	Pane view = scene.getNewWindow("src/Booking.fxml"); //call getNewWindow function in object scene
-    	borderPane.setCenter(view);
-    }
-    
-=======
     @FXML
     private Label roomUnavailableLabel;
 
@@ -122,5 +108,5 @@ public class MainController implements Initializable{
     	
     }
     
->>>>>>> main
+
 }

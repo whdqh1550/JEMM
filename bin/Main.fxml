@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<<<<<<< HEAD
-=======
 <?import javafx.scene.chart.*?>
 <?import javafx.scene.text.*?>
->>>>>>> main
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -16,23 +13,9 @@
    <children>
       <BorderPane fx:id="borderPane" prefHeight="800.0" prefWidth="800.0">
          <left>
-<<<<<<< HEAD
-            <VBox fx:id="vb" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-               <children>
-                  <ImageView fx:id="logoImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                     <image>
-                        <Image url="@../images/default-logo.png" />
-                     </image>
-                  </ImageView>
-                  <Button fx:id="homeButton" mnemonicParsing="false" prefWidth="75.0" text="HOME" textAlignment="CENTER">
-=======
             <VBox fx:id="vb" prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
                   <Button fx:id="homeButton" mnemonicParsing="false" onAction="#SwitchToHome" prefWidth="75.0" text="HOME" textAlignment="CENTER">
->>>>>>> main
                      <VBox.margin>
                         <Insets left="10.0" top="30.0" />
                      </VBox.margin>
@@ -42,11 +25,7 @@
                         <Insets left="10.0" top="30.0" />
                      </VBox.margin>
                   </Button>
-<<<<<<< HEAD
-                  <Button fx:id="calanderButton" mnemonicParsing="false" prefWidth="75.0" text="CALENDER">
-=======
                   <Button fx:id="calanderButton" mnemonicParsing="false" onAction="#calListener" prefWidth="75.0" text="CALENDER">
->>>>>>> main
                      <VBox.margin>
                         <Insets left="10.0" top="30.0" />
                      </VBox.margin>
@@ -61,22 +40,14 @@
                         <Insets left="10.0" top="30.0" />
                      </VBox.margin>
                   </Button>
-<<<<<<< HEAD
-                  <Button fx:id="exitButton" mnemonicParsing="false" text="EXIT PROGRAM">
-                     <VBox.margin>
-                        <Insets left="10.0" top="300.0" />
-=======
                   <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exitProgram" text="EXIT PROGRAM">
                      <VBox.margin>
-                        <Insets left="10.0" top="325.0" />
->>>>>>> main
+                        <Insets left="10.0" top="300.0" />
                      </VBox.margin>
                   </Button>
                </children>
             </VBox>
          </left>
-<<<<<<< HEAD
-=======
          <top>
             <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
@@ -157,7 +128,6 @@
                </children>
             </HBox>
          </top>
->>>>>>> main
       </BorderPane>
    </children>
 </AnchorPane>
