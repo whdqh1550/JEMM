@@ -352,6 +352,48 @@ public class CalendarController implements Initializable{
 
     @FXML
     private Label d46;
+    @FXML
+    private Label d61;
+    @FXML
+    private Label d62;
+    @FXML
+    private Label d63;
+    @FXML
+    private Label d64;
+    @FXML
+    private Label d65;
+    @FXML
+    private Label d66;
+    @FXML
+    private Label d67;
+    @FXML
+    private Label a61;
+    @FXML
+    private Label a62;
+    @FXML
+    private Label a63;
+    @FXML
+    private Label a64;
+    @FXML
+    private Label a65;
+    @FXML
+    private Label a66;
+    @FXML
+    private Label a67;
+    @FXML
+    private HBox b61;
+    @FXML
+    private HBox b62;
+    @FXML
+    private HBox b63;
+    @FXML
+    private HBox b64;
+    @FXML
+    private HBox b65;
+    @FXML
+    private HBox b66;
+    @FXML
+    private HBox b67;
     
     @FXML 
     private Label yearDisplay;
@@ -364,7 +406,7 @@ public class CalendarController implements Initializable{
     
     
 
-    ArrayList<Label> test = new ArrayList<Label>();
+    ArrayList<Label> aCalendar = new ArrayList<Label>();
     ArrayList<Label> dCalendar = new ArrayList<Label>();
     int mCounter = 0;
     
@@ -431,42 +473,55 @@ public class CalendarController implements Initializable{
 		int [] LeaptDays = {31,29,31,30,31,30,31,31,30,31,30,31};
 		int counter = 1;
 		arrayadder();
+		
 		if(date.isLeapYear()) {
-			for(int i = 0 ; i < 35;i++) {
+			for(int i = 0 ; i < 42;i++) {
 				if(i < startingDay) {
+					aCalendar.get(i).setText("");
 					dCalendar.get(i).setText("");
+					
 					
 				}
 				else if(counter > LeaptDays[month-1]) {
 					dCalendar.get(i).setText("");
+					aCalendar.get(i).setText("");
 					
 				}
 				else {
 					dCalendar.get(i).setText(""+counter);
+					
 					counter++;
 					
 				}
 			}
 		}
 		else {
-			for(int i = 0 ; i < 35;i++) {
+			for(int i = 0 ; i < 42;i++) {
 				if(i < startingDay) {
 					dCalendar.get(i).setText("");
+					aCalendar.get(i).setText("");
+					
 					
 				}
 				else if(counter > tDays[month-1]) {
 					dCalendar.get(i).setText("");
+					aCalendar.get(i).setText("");
+					
 					
 				}
 				else {
 					dCalendar.get(i).setText(""+counter);
-					counter++;
+					aCalendar.get(i).setText("testing");// gotta put capacity of that day.
+					counter++;// brings the date that matches with counter, cause counter is the date. 
+					
 					
 				}
-				
+				System.out.println(i);
+				System.out.println(startingDay);
 			}
 			
 		}
+		
 	}
 	
 	int starter(String day) {
@@ -538,6 +593,58 @@ public class CalendarController implements Initializable{
 		dCalendar.add(d55);
 		dCalendar.add(d56);
 		dCalendar.add(d57);
+		aCalendar.add(a11);/////////////
+		aCalendar.add(a12);
+		aCalendar.add(a13);
+		aCalendar.add(a14);
+		aCalendar.add(a15);
+		aCalendar.add(a16);
+		aCalendar.add(a17);
+		aCalendar.add(a21);
+		aCalendar.add(a22);
+		aCalendar.add(a23);
+		aCalendar.add(a24);
+		aCalendar.add(a25);
+		aCalendar.add(a26);
+		aCalendar.add(a27);
+		aCalendar.add(a31);
+		aCalendar.add(a32);
+		aCalendar.add(a33);
+		aCalendar.add(a34);
+		aCalendar.add(a35);
+		aCalendar.add(a36);
+		aCalendar.add(a37);
+		aCalendar.add(a41);
+		aCalendar.add(a42);
+		aCalendar.add(a43);
+		aCalendar.add(a44);
+		aCalendar.add(a45);
+		aCalendar.add(a46);
+		aCalendar.add(a47);
+		aCalendar.add(a51);
+		aCalendar.add(a52);
+		aCalendar.add(a53);
+		aCalendar.add(a54);
+		aCalendar.add(a55);
+		aCalendar.add(a56);
+		aCalendar.add(a57);
+		dCalendar.add(d61);
+		dCalendar.add(d62);
+		dCalendar.add(d63);
+		dCalendar.add(d64);
+		dCalendar.add(d65);
+		dCalendar.add(d66);
+		dCalendar.add(d67);
+		aCalendar.add(a61);
+		aCalendar.add(a62);
+		aCalendar.add(a63);
+		aCalendar.add(a64);
+		aCalendar.add(a65);
+		aCalendar.add(a66);
+		aCalendar.add(a67);
+		
+		
+		
 		
 	}
 
