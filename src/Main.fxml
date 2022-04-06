@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -11,17 +13,9 @@
    <children>
       <BorderPane fx:id="borderPane" prefHeight="800.0" prefWidth="800.0">
          <left>
-            <VBox fx:id="vb" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <VBox fx:id="vb" prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fx:id="logoImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                     <image>
-                        <Image url="@../images/default-logo.png" />
-                     </image>
-                  </ImageView>
-                  <Button fx:id="homeButton" mnemonicParsing="false" prefWidth="75.0" text="HOME" textAlignment="CENTER">
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#SwitchToHome" prefWidth="75.0" text="HOME" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets left="10.0" top="30.0" />
                      </VBox.margin>
@@ -46,7 +40,7 @@
                         <Insets left="10.0" top="30.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="exitButton" mnemonicParsing="false" text="EXIT PROGRAM">
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exitProgram" text="EXIT PROGRAM">
                      <VBox.margin>
                         <Insets left="10.0" top="325.0" />
                      </VBox.margin>
@@ -54,6 +48,86 @@
                </children>
             </VBox>
          </left>
+         <top>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="logoImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/default-logo.png" />
+                     </image>
+                  </ImageView>
+                  <GridPane alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <HBox.margin>
+                        <Insets left="115.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label fx:id="roomsLabel" alignment="TOP_CENTER" prefHeight="162.0" prefWidth="198.0" text="Rooms" underline="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="totalRoomLabel" alignment="CENTER" prefHeight="162.0" prefWidth="220.0" text="0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane alignment="CENTER" layoutX="293.0" layoutY="10.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <HBox.margin>
+                        <Insets left="115.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label fx:id="roomAvailableLabel" alignment="TOP_CENTER" prefHeight="162.0" prefWidth="198.0" text="Available" underline="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="availableNumLabel" alignment="CENTER" prefHeight="162.0" prefWidth="220.0" text="50">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane alignment="CENTER" layoutX="526.0" layoutY="10.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <HBox.margin>
+                        <Insets left="115.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label fx:id="roomUnavailableLabel" alignment="TOP_CENTER" prefHeight="162.0" prefWidth="198.0" text="Unavailable" underline="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="unavailableNumLabel" alignment="CENTER" prefHeight="162.0" prefWidth="220.0" text="0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+         </top>
       </BorderPane>
    </children>
 </AnchorPane>

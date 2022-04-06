@@ -1,16 +1,23 @@
 package application.controller;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import application.FxmlLoader;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
-public class MainController {
+public class MainController implements Initializable{
 
 	@FXML
     private BorderPane borderPane;
@@ -42,6 +49,29 @@ public class MainController {
     @FXML
     private Button homeButton;
     
+    @FXML
+    private Label roomUnavailableLabel;
+
+    @FXML
+    private Label totalRoomLabel;
+
+    @FXML
+    private Label roomAvailableLabel;
+
+    @FXML
+    private Label unavailableNumLabel;
+    
+    @FXML
+    private Label availableNumLabel;
+    
+    @FXML
+    private Label roomsLabel;
+    
+    @FXML
+    void SwitchToHome(ActionEvent event) throws IOException {
+    	loadHomePage();
+    }
+    
     
     @FXML
     void PressedBookingButton(ActionEvent event) {
@@ -54,6 +84,27 @@ public class MainController {
     	FxmlLoader scene = new FxmlLoader();
     	Pane view = scene.getPane("src/Calender.fxml");
     	borderPane.setCenter(view);
+    }
+    
+    @FXML
+    void exitProgram(ActionEvent event) {
+    	Platform.exit();
+    }
+    
+    void loadHomePage()
+    {
+    	FxmlLoader scene = new FxmlLoader();
+    	Pane view = scene.getPane("src\\Table.fxml");
+    	borderPane.setCenter(view);
+    	
+    	FxmlLoader scene2 = new FxmlLoader();
+    	Pane view2 = scene2.getPane("src\\PieChart.fxml");
+    	borderPane.setRight(view2);
+    }
+    
+    public void initialize(URL arg0, ResourceBundle arg1)
+    {
+    	
     }
     
 }
