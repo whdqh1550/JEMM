@@ -489,7 +489,7 @@ public class CalendarController implements Initializable{
 				}
 				else {
 					dCalendar.get(i).setText(""+counter);
-					
+					aCalendar.get(i).setText("testing");// gotta put capacity of that day.
 					counter++;
 					
 				}
@@ -516,9 +516,7 @@ public class CalendarController implements Initializable{
 					
 					
 				}
-				System.out.println(i);
-				System.out.println(startingDay);
-			}
+							}
 			
 		}
 		
