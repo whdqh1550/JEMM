@@ -94,11 +94,11 @@ public class MainController implements Initializable{
     void loadHomePage()
     {
     	FxmlLoader scene = new FxmlLoader();
-    	Pane view = scene.getPane("src\\Table.fxml");
+    	Pane view = scene.getPane("src/Table.fxml");
     	borderPane.setCenter(view);
     	
     	FxmlLoader scene2 = new FxmlLoader();
-    	Pane view2 = scene2.getPane("src\\PieChart.fxml");
+    	Pane view2 = scene2.getPane("src/PieChart.fxml");
     	borderPane.setRight(view2);
     }
     
