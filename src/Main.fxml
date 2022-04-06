@@ -31,7 +31,7 @@
                         <Insets left="10.0" top="30.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="calanderButton" mnemonicParsing="false" prefWidth="75.0" text="CALENDER">
+                  <Button fx:id="calanderButton" mnemonicParsing="false" onAction="#calListener" prefWidth="75.0" text="CALENDER">
                      <VBox.margin>
                         <Insets left="10.0" top="30.0" />
                      </VBox.margin>
