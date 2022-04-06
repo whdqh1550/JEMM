@@ -353,8 +353,12 @@ public class CalendarController implements Initializable{
     @FXML
     private Label d46;
     
+    @FXML 
+    private Label yearDisplay;
+    
     LocalDate date = LocalDate.now().withDayOfMonth(1);
     int month = date.getMonthValue();
+    int year = date.getYear();
     
     String[] months = {"January","Feburary","March","April","May","June","July","August","September","October","November","December"};
     
@@ -391,7 +395,7 @@ public class CalendarController implements Initializable{
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
 		
-		System.out.println(date.getDayOfWeek());
+		
 		monthWriter(month);
 		dateWriter(month,date);
 		
@@ -408,13 +412,16 @@ public class CalendarController implements Initializable{
 			month = 1;
 			dmonth = 1;
 			mCounter = 0;
+			year++;
 		}
 		if(dmonth <1) {
 			month = 12;
 			dmonth = 12;
 			mCounter = 0;
+			year--;
 		}
 		monthDisplay.setText(months[dmonth-1]);
+		yearDisplay.setText(""+year);
 	}
 	
 	void dateWriter(int month,LocalDate upDatedate) {

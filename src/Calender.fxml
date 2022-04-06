@@ -8,7 +8,6 @@
 
 <AnchorPane prefHeight="650.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalendarController">
    <children>
-      <DatePicker layoutX="448.0" layoutY="14.0" prefHeight="32.0" prefWidth="188.0" />
       <Label fx:id="monthDisplay" alignment="CENTER" layoutX="17.0" layoutY="63.0" prefHeight="70.0" prefWidth="615.0" text="MONTH" textAlignment="CENTER" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="63.0">
          <font>
             <Font size="56.0" />
@@ -573,5 +572,10 @@
       </HBox>
       <Button layoutX="128.0" layoutY="85.0" mnemonicParsing="false" onAction="#prevMonth" text="&lt;-" />
       <Button layoutX="487.0" layoutY="85.0" mnemonicParsing="false" onAction="#nextMonth" text="-&gt;" />
+      <Label fx:id="yearDisplay" alignment="CENTER" layoutX="14.0" layoutY="30.0" prefHeight="48.0" prefWidth="618.0" text="Year">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

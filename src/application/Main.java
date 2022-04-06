@@ -29,8 +29,6 @@ public class Main extends Application {
 	
 	public static void main(String[] args) {
 		launch(args);
-		System.out.println("hi guys");//thirdtest
-		System.out.println("hi guys from Erik"); //Test comment
-		System.out.println("This is Marco"); //Test comment
+		
 	}
 }

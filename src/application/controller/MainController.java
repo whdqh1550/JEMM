@@ -45,14 +45,12 @@ public class MainController {
     
     @FXML
     void PressedBookingButton(ActionEvent event) {
-    	System.out.println("this");
     	FxmlLoader scene = new FxmlLoader();
     	Pane view = scene.getPane("src/Booking.fxml");
     	borderPane.setCenter(view);
     }
     @FXML
     void calListener(ActionEvent event) {
-    	System.out.println("cal");
     	FxmlLoader scene = new FxmlLoader();
     	Pane view = scene.getPane("src/Calender.fxml");
     	borderPane.setCenter(view);
