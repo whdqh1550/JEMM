@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.TableController">
+   <children>
+      <TableView fx:id="guestTable" layoutX="-1.0" layoutY="-1.0" prefHeight="400.0" prefWidth="400.0">
+        <columns>
+          <TableColumn fx:id="firstName" text="First Name" />
+          <TableColumn fx:id="lastName" text="Last Name" />
+            <TableColumn fx:id="roomNumber" text="Room Number" />
+            <TableColumn fx:id="checkIn" text="Check In" />
+            <TableColumn fx:id="checkOut" text="Check Out" />
+        </columns>
+         <padding>
+            <Insets bottom="100.0" />
+         </padding>
+      </TableView>
+   </children>
+</AnchorPane>
