@@ -5,14 +5,14 @@ public class HotelRooms extends Person{
 	String checkIn;
 	String checkOut;
 	String phoneNumber;
-	boolean isAvailable;
+	String isAvailable;
 	
 	public HotelRooms() {
 		super();
 	}
 
 	public HotelRooms(String firstName, String lastName, int roomNumber, 
-			String checkIn, String checkOut, String phoneNumber, boolean isAvailable) {
+			String checkIn, String checkOut, String phoneNumber, String isAvailable) {
 		super(firstName, lastName);
 		this.roomNumber = roomNumber;
 		this.checkIn = checkIn;
@@ -37,7 +37,7 @@ public class HotelRooms extends Person{
 		return phoneNumber;
 	}
 
-	public boolean isAvailable() {
+	public String isAvailable() {
 		return isAvailable;
 	}
 
@@ -57,7 +57,7 @@ public class HotelRooms extends Person{
 		this.phoneNumber = phoneNumber;
 	}
 
-	public void setAvailable(boolean isAvailable) {
+	public void setAvailable(String isAvailable) {
 		this.isAvailable = isAvailable;
 	}
 
