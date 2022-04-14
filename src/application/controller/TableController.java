@@ -8,8 +8,6 @@ import java.util.ResourceBundle;
 
 import application.model.HotelRooms;
 import application.model.Table;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -19,8 +17,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 public class TableController implements Initializable{
 	
 	private Table t;
-	private int avaialble =0;
-	private int unAvailable = 0;
 	
 	 @FXML
 	 private TableView<HotelRooms> guestTable;
@@ -63,14 +59,6 @@ public class TableController implements Initializable{
     	List<HotelRooms> table = new ArrayList<HotelRooms>();
     	for(int i = 0; i < t.getNumberOfRooms(); i++)
     	{
-    		if(t.getHotel(i).isAvailable().contentEquals("Y"))
-    		{
-    			avaialble++;
-    		}
-    		else
-    		{
-    			unAvailable++;
-    		}
     		table.add(t.getHotel(i));
     		
     	}

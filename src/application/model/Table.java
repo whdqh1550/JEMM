@@ -10,6 +10,8 @@ public class Table {
 	
 	private ArrayList<HotelRooms> hotel;
 	private int numberOfRooms = 0;
+	private int available = 0;
+	private int unAvailable = 0;
 
 	public Table() throws IOException {
 		hotel = new ArrayList<HotelRooms>();
@@ -51,10 +53,12 @@ public class Table {
 				if(hotelData[7].contains("TRUE"))
 				{
 					isAvailable = "Y";
+					available++;
 				}
 				else
 				{
 					isAvailable = "N";
+					unAvailable++;
 				}
 				
 				HotelRooms hotel = new HotelRooms(firstName, lastName, roomNumber,
@@ -91,6 +95,22 @@ public class Table {
 
 	private void setNumberOfRooms() {
 		this.numberOfRooms = hotel.size();
+	}
+
+	public int getAvailable() {
+		return available;
+	}
+
+	public void setAvailable(int available) {
+		this.available = available;
+	}
+
+	public int getUnAvailable() {
+		return unAvailable;
+	}
+
+	public void setUnAvailable(int unAvailable) {
+		this.unAvailable = unAvailable;
 	}
 	
 	

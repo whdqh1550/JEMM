@@ -2,6 +2,7 @@ package application.controller;
 
 
 import application.model.FxmlLoader;
+import application.model.Table;
 
 import java.io.IOException;
 import java.net.URL;
@@ -19,6 +20,8 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
 public class MainController implements Initializable{
+	
+	private Table t;
 
 	@FXML
     private BorderPane borderPane;
@@ -105,6 +108,16 @@ public class MainController implements Initializable{
     
     public void initialize(URL arg0, ResourceBundle arg1)
     {
+    	try {
+			t = new Table();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	availableNumLabel.setText(Integer.toString(t.getUnAvailable()));
+    	unavailableNumLabel.setText(Integer.toString(t.getAvailable()));
+    	totalRoomLabel.setText(Integer.toString(t.getAvailable() + t.getUnAvailable()));
     	loadHomePage();
     }
     
