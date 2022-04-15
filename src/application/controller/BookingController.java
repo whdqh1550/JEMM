@@ -4,13 +4,20 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 import application.model.Data;
@@ -21,55 +28,87 @@ public class BookingController implements Initializable {
     private AnchorPane mainPane;
     @FXML
     private TextField phoneNumberField;
-    
+    @FXML
+    private DatePicker dateStart;
+    @FXML
+    private TextField guestsField;
+    @FXML
+    private DatePicker dateEnd;
     @FXML
     private ListView<String> listView;
-
+    @FXML
+    private TextArea infoTextArea;
     @FXML
     private TextField nameField;
 
     @FXML
     void ConfirmBookingPressed(ActionEvent event) throws Exception {
+    	String name=  nameField.getText().toString();
+   	 	String phoneNumber= phoneNumberField.getText().toString();
+   	 	String roomNum="";
+   	 	String guestNum=guestsField.getText().toString();
+   	 	LocalDate dateStartString = dateStart.getValue();
+   	 	LocalDate dateEndString = dateEnd.getValue();
+   	 	System.out.println(dateStartString);
+	 	ObservableList listofItems=listView.getSelectionModel().getSelectedItems();
+	 	for(Object item : listofItems){
+	 		roomNum+=String.format("%s", (String)item);
+	 	}
+    	Alert error= new Alert(AlertType.ERROR);
+    	if(roomNum.length() == 0) {
+    		error.setContentText("Select a room!");
+    		error.showAndWait();
+    		return;
+    	}
+		if(name.length() == 0 || phoneNumber.length() == 0 || guestNum.length() == 0
+				|| dateStart.getValue() == null || dateEnd.getValue() == null) {
+			error.setContentText("Fill in all boxes!");
+			error.showAndWait();
+			return;
+		}
+    	System.out.println("thisaf");
     	ArrayList<String> roomInfo = new ArrayList<String>();
     	Data var = new Data();
     	var.loadData();
-    	String name=  nameField.getText().toString();
-   	 	String phoneNumber= phoneNumberField.getText().toString();
+    	
    	 	roomInfo.add(name);
    	 	roomInfo.add(phoneNumber);	
-   	 	String roomNum="";
-   	 	ObservableList listofItems=listView.getSelectionModel().getSelectedItems();
-   	 	for(Object item : listofItems){
-   	 		roomNum+=String.format("%s", (String)item);
-   	 	}
+   	 	
    	 	System.out.println(roomNum);
    	 	
    	  	var.addRoomInfo(roomNum,  roomInfo); //call addItem function in model class
-//   	 	Data.loadData();
+   	 	Data.loadData();
    	  	nameField.clear();
    	  	phoneNumberField.clear(); 
     }
 
     @FXML
     void CheckAvailabilityPressed(ActionEvent event) {
-
+    	Map<String, ArrayList<String>> localData = new HashMap<String, ArrayList<String>>();
+    	ArrayList<String> localRoomInfo = new ArrayList<String>();
+    	ObservableList listOfItems=listView.getSelectionModel().getSelectedItems();
+    	localData = Data.getData();
+    	int roomInfo = Integer.parseInt(listOfItems.get(0).toString());//get item selected
+    	localRoomInfo = localData.get(listOfItems.get(0).toString());
+    	//System.out.println(localRoomInfo.get(0));
+    	String info = "";
+    	for(int i = 0; i < 7; i++) {
+    		info += localRoomInfo.get(i) + " ";
+    	}
+    	infoTextArea.setText(info);
     }
     
     @Override
     public void initialize(URL arg0, ResourceBundle arg1){	
-    	int[] a = new int[75];
-//    	for (int i = 1; i < 76; i++) {
-//    		a[i-1] = i;
-//    		System.out.println(a[i-1]);
-//    	}
-    	
-		listView.getItems().addAll("1","2","3","4","5", "51");
-		try {
+
+    	try {
 			Data.loadData();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		 //listview.getItems().addAll("Vogue1","Time2","Elle2","Fortune2");
-		 //listview.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+    	ArrayList<String> localRoomNums = new ArrayList<String>();
+    	localRoomNums = Data.getRoomNums();
+		listView.getItems().addAll(localRoomNums);
+		//listview.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 	}
 }
