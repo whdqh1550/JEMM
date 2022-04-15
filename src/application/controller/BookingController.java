@@ -108,6 +108,7 @@ public class BookingController implements Initializable {
 		}
     	ArrayList<String> localRoomNums = new ArrayList<String>();
     	localRoomNums = Data.getRoomNums();
+    	listView.getItems().clear();
 		listView.getItems().addAll(localRoomNums);
 		//listview.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 	}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.InventoryController">
+   <children>
+      <AnchorPane layoutX="-8.0" layoutY="-8.0" prefHeight="425.0" prefWidth="382.0">
+         <children>
+            <TextField fx:id="userInput" layoutX="27.0" layoutY="41.0" promptText="Type here" />
+            <Button fx:id="searchButton" layoutX="222.0" layoutY="41.0" mnemonicParsing="false" onAction="#searchAction" text="Search" />
+            <TextArea fx:id="resultArea" layoutX="27.0" layoutY="88.0" prefHeight="305.0" prefWidth="329.0" />
+            <Button fx:id="listAllButton" layoutX="291.0" layoutY="41.0" mnemonicParsing="false" onAction="#listAll" text="List All" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
