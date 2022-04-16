@@ -44,11 +44,11 @@ public class SearchController implements Initializable{
 	@FXML
 	public void searchAction(ActionEvent event) throws IOException {
 		//fill in array with data from file
-		List<String[]>dataList = application.model.HotelRooms.readFileData();
+		//List<String[]>dataList = application.model.HotelRooms.readFileData();
 		List<String[]> resultList = new ArrayList<>();
 		
 		String searchTerm = userInput.getText().toString();
-		resultList = application.model.HotelRooms.dataBySearch(searchTerm);
+		//resultList = application.model.HotelRooms.dataBySearch(searchTerm);
 		
 		
 		

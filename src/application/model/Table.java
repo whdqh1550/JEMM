@@ -43,22 +43,32 @@ public class Table {
 				String[] hotelData = line.split(",");
 				//System.out.println(hotelData[0]);
 				int roomNumber = Integer.valueOf(hotelData[0]);
-				String firstName = hotelData[1];
-				String lastName = hotelData[2];
-				String phoneNumber = hotelData[3];
-				String checkIn = hotelData[4];
-				String checkOut = hotelData[5];
+				String firstName;
+				String lastName;
+				String phoneNumber;
+				String checkIn;
+				String checkOut;
 				String isAvailable;
 				
-				if(hotelData[7].contains("TRUE"))
+				if(hotelData[7].contains("FALSE"))
 				{
-					isAvailable = "Y";
-					available++;
+					isAvailable = "N";
+					firstName = hotelData[1];
+					lastName = hotelData[2];
+					phoneNumber = hotelData[3];
+					checkIn = hotelData[4];
+					checkOut = hotelData[5];
+					unAvailable++;
 				}
 				else
 				{
-					isAvailable = "N";
-					unAvailable++;
+					isAvailable = "Y";
+					firstName = "";
+					lastName = "";
+					phoneNumber = "";
+					checkIn = "";
+					checkOut = "";
+					available++;
 				}
 				
 				HotelRooms hotel = new HotelRooms(firstName, lastName, roomNumber,
