@@ -44,9 +44,6 @@ public class SearchController implements Initializable{
 	@FXML
 	public void searchAction(ActionEvent event) throws IOException {
 		
-		
-		
-		
 	}
 
 	@Override
