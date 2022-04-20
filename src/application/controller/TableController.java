@@ -59,7 +59,7 @@ public class TableController implements Initializable{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
- 
+    	
     	List<HotelRooms> table = new ArrayList<HotelRooms>();
     	List<HotelRooms> table2 = new ArrayList<HotelRooms>();
     	for(int i = 0; i < t.getNumberOfRooms(); i++)
@@ -69,7 +69,6 @@ public class TableController implements Initializable{
     		else
     			table2.add(t.getHotel(i));
     	}
-    	
     	guestTable.getItems().addAll(table2);
     	guestTable.getItems().addAll(table);
     	
