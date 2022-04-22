@@ -97,6 +97,13 @@ public class MainController implements Initializable{
     	Platform.exit();
     }
     
+    @FXML
+    void switchToSearch(ActionEvent event) {
+    	FxmlLoader scene = new FxmlLoader();
+    	Pane view = scene.getPane("src/Search.fxml");
+    	borderPane.setCenter(view);
+    }
+	
     void loadHomePage()
     {
     	FxmlLoader scene = new FxmlLoader();
