@@ -52,16 +52,6 @@ public class Table {
 				
 				if(hotelData[7].contains("FALSE"))
 				{
-					isAvailable = "N";
-					firstName = hotelData[1];
-					lastName = hotelData[2];
-					phoneNumber = hotelData[3];
-					checkIn = hotelData[4];
-					checkOut = hotelData[5];
-					unAvailable++;
-				}
-				else
-				{
 					isAvailable = "Y";
 					firstName = "";
 					lastName = "";
@@ -69,6 +59,17 @@ public class Table {
 					checkIn = "";
 					checkOut = "";
 					available++;
+					
+				}
+				else
+				{
+					isAvailable = "N";
+					firstName = hotelData[1];
+					lastName = hotelData[2];
+					phoneNumber = hotelData[3];
+					checkIn = hotelData[4];
+					checkOut = hotelData[5];
+					unAvailable++;
 				}
 				
 				HotelRooms hotel = new HotelRooms(firstName, lastName, roomNumber,
