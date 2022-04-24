@@ -64,13 +64,13 @@ public class TableController implements Initializable{
     	List<HotelRooms> table2 = new ArrayList<HotelRooms>();
     	for(int i = 0; i < t.getNumberOfRooms(); i++)
     	{
-    		if(t.getHotel(i).isAvailable() == "Y")
+    		if(t.getHotel(i).isAvailable() == "N")
     			table.add(t.getHotel(i));
     		else
     			table2.add(t.getHotel(i));
     	}
-    	guestTable.getItems().addAll(table2);
     	guestTable.getItems().addAll(table);
+    	guestTable.getItems().addAll(table2);
     	
 	}
 
