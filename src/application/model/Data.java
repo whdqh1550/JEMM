@@ -24,30 +24,31 @@ public class Data {
 //	private static int csvCurrentLine = 10;
 	private static ArrayList<String> roomNums = new ArrayList<String>();
 	public static void addRoomInfo (String room, ArrayList<String> roomInfo) throws Exception{
-		
-		if(data.containsKey(room)) {
-			System.out.println("room taken bye");
+		ArrayList<String> checkRoomAvail = new ArrayList<String>();
+		checkRoomAvail = data.get(room);
+//		System.out.println(checkRoomAvail.get(6));
+		if(checkRoomAvail.get(6).compareTo("False") == 0) {
+			System.out.println("room already taken");
 			return;
-		}
+		} 
 		
-		data.put(room, roomInfo); //adding to data structure 
-//		h1.put("room", "this");
+//		data.put(room, roomInfo); //adding to data structure 
 		System.out.println("Room booked: " + room +"\tRoom information: "+ roomInfo);
-		
-		File dir = new File("src/data.csv");
-		String loc = dir.getCanonicalPath();
- 
-		FileWriter fstream = new FileWriter(loc, true);
-		BufferedWriter out = new BufferedWriter(fstream);
-		String toCSV = "";
-		toCSV += room;
-		for (int i = 0; i < roomInfo.size(); ++i) {
-			toCSV += ","+roomInfo.get(i);
-		}	
-		out.write(toCSV);
-		out.newLine();
-		loadData();
-		out.close();
+//		
+//		File dir = new File("src/data.csv");
+//		String loc = dir.getCanonicalPath();
+// 
+//		FileWriter fstream = new FileWriter(loc, true);
+//		BufferedWriter out = new BufferedWriter(fstream);
+//		String toCSV = "";
+//		toCSV += room;
+//		for (int i = 0; i < roomInfo.size(); ++i) {
+//			toCSV += ","+roomInfo.get(i);
+//		}	
+//		out.write(toCSV);
+//		out.newLine();
+//		loadData();
+//		out.close();
 
 	}
 	public static ArrayList<String> getRoomNums() {
@@ -89,7 +90,9 @@ public class Data {
 //			csvCurrentLine++;
 		}
 		for(int i = 1; i < largestRoomNum; ++i) {
-			roomNums.add(String.valueOf(i));
+			if (!roomNums.contains(String.valueOf(i))) {
+				roomNums.add(String.valueOf(i));
+			}
 		}
 //		System.out.println("this");
 		

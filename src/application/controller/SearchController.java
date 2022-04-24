@@ -1,11 +1,16 @@
 package application.controller;
 
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
+import application.model.Data;
+import application.model.Search;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -27,29 +32,34 @@ public class SearchController implements Initializable{
 	private Button searchButton;
 	
 	@FXML
-	private Button listAllButton;
-	
-	@FXML
 	private TextArea resultArea;
 	
-	//print full list
-	@FXML
-	public void listAll(ActionEvent event) throws IOException {
-		resultArea.clear();
-		
-		
-	}
 	
 	//search for value from user input
 	@FXML
 	public void searchAction(ActionEvent event) throws IOException {
+		resultArea.clear();
+		//fill in hashmap with filtered data from search class
+		String input = userInput.getText().toString();
+		//resultArea.appendText(input);
+		Map<String, ArrayList<String>> filteredData = Search.filterData(input);
+		
+		//print to result area
+		for (String key: filteredData.keySet()){  
+			resultArea.appendText("Room Number: " + key + "\nInformation: " + filteredData.get(key) + "\n\n");
+		}
 		
 	}
+	
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		//Autofill up
-		
+		resultArea.clear();
+		try {
+			Data.loadData();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
