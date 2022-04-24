@@ -103,7 +103,7 @@ public class MainController implements Initializable{
     	Pane view = scene.getPane("src/Search.fxml");
     	borderPane.setCenter(view);
     }
-	
+    @FXML
     void loadHomePage()
     {
     	FxmlLoader scene = new FxmlLoader();

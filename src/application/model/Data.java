@@ -25,10 +25,10 @@ public class Data {
 	private static ArrayList<String> roomNums = new ArrayList<String>();
 	public static void addRoomInfo (String room, ArrayList<String> roomInfo) throws Exception{
 		
-		if(data.containsKey(room)) {
-			System.out.println("room taken bye");
-			return;
-		}
+//		if(data.containsKey(room)) {
+//			System.out.println("room taken bye");
+//			return;
+//		} 
 		
 		data.put(room, roomInfo); //adding to data structure 
 //		h1.put("room", "this");
@@ -89,7 +89,9 @@ public class Data {
 //			csvCurrentLine++;
 		}
 		for(int i = 1; i < largestRoomNum; ++i) {
-			roomNums.add(String.valueOf(i));
+			if (!roomNums.contains(String.valueOf(i))) {
+				roomNums.add(String.valueOf(i));
+			}
 		}
 //		System.out.println("this");
 		

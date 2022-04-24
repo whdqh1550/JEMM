@@ -35,7 +35,7 @@
                         <Insets left="10.0" top="30.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="searchButton" mnemonicParsing="false" prefWidth="75.0" text="SEARCH">
+                  <Button fx:id="searchButton" mnemonicParsing="false" onAction="#switchToSearch" prefWidth="75.0" text="SEARCH">
                      <VBox.margin>
                         <Insets left="10.0" top="30.0" />
                      </VBox.margin>
