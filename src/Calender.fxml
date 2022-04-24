@@ -6,16 +6,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="650.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalendarController">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalendarController">
    <children>
-      <Label fx:id="monthDisplay" alignment="CENTER" layoutX="17.0" layoutY="63.0" prefHeight="70.0" prefWidth="615.0" text="MONTH" textAlignment="CENTER" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="63.0">
+      <Label fx:id="monthDisplay" alignment="CENTER" layoutX="292.0" layoutY="63.0" text="MONTH" textAlignment="CENTER" AnchorPane.leftAnchor="292.0" AnchorPane.rightAnchor="292.0">
          <font>
             <Font size="56.0" />
          </font>
       </Label>
-      <HBox layoutX="2.0" layoutY="127.0" prefHeight="536.0" prefWidth="650.0">
+      <HBox layoutX="2.0" layoutY="127.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="127.0">
          <children>
-            <VBox prefHeight="530.0" prefWidth="92.0">
+            <VBox>
                <children>
                   <Label fx:id="Sunday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Sunday">
                      <font>
@@ -108,7 +108,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox prefHeight="530.0" prefWidth="92.0">
+            <VBox>
                <children>
                   <Label fx:id="Monday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Monday">
                      <font>
@@ -201,7 +201,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox prefHeight="530.0" prefWidth="92.0">
+            <VBox>
                <children>
                   <Label fx:id="Tuesday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Tuesday">
                      <font>
@@ -294,7 +294,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox prefHeight="530.0" prefWidth="92.0">
+            <VBox>
                <children>
                   <Label fx:id="Wednesday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Wednesday">
                      <font>
@@ -387,7 +387,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox prefHeight="530.0" prefWidth="92.0">
+            <VBox>
                <children>
                   <Label fx:id="Thursday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Thursday">
                      <font>
@@ -480,7 +480,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox prefHeight="530.0" prefWidth="92.0">
+            <VBox>
                <children>
                   <Label fx:id="Friday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Friday">
                      <font>
@@ -573,7 +573,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox prefHeight="530.0" prefWidth="92.0">
+            <VBox>
                <children>
                   <Label fx:id="Saturday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Saturday">
                      <font>
@@ -668,9 +668,9 @@
             </VBox>
          </children>
       </HBox>
-      <Button layoutX="128.0" layoutY="85.0" mnemonicParsing="false" onAction="#prevMonth" text="&lt;-" />
-      <Button layoutX="487.0" layoutY="85.0" mnemonicParsing="false" onAction="#nextMonth" text="-&gt;" />
-      <Label fx:id="yearDisplay" alignment="CENTER" layoutX="14.0" layoutY="30.0" prefHeight="48.0" prefWidth="618.0" text="Year">
+      <Button layoutX="103.0" layoutY="78.0" maxHeight="25.0" maxWidth="50.0" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#prevMonth" prefHeight="25.0" prefWidth="50.0" text="&lt;-" />
+      <Button layoutX="1241.0" layoutY="78.0" maxHeight="25.0" maxWidth="50.0" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#nextMonth" prefHeight="25.0" prefWidth="50.0" text="-&gt;" />
+      <Label fx:id="yearDisplay" alignment="CENTER" layoutX="16.0" layoutY="35.0" text="Year" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0">
          <font>
             <Font size="39.0" />
          </font>

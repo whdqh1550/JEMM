@@ -59,19 +59,18 @@ public class TableController implements Initializable{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
- 
+    	
     	List<HotelRooms> table = new ArrayList<HotelRooms>();
     	List<HotelRooms> table2 = new ArrayList<HotelRooms>();
     	for(int i = 0; i < t.getNumberOfRooms(); i++)
     	{
-    		if(t.getHotel(i).isAvailable() == "Y")
+    		if(t.getHotel(i).isAvailable() == "N")
     			table.add(t.getHotel(i));
     		else
     			table2.add(t.getHotel(i));
     	}
-    	
-    	guestTable.getItems().addAll(table2);
     	guestTable.getItems().addAll(table);
+    	guestTable.getItems().addAll(table2);
     	
 	}
 

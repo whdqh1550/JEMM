@@ -82,12 +82,14 @@ public class MainController implements Initializable{
     	FxmlLoader scene = new FxmlLoader();
     	Pane view = scene.getPane("src/Booking.fxml");
     	borderPane.setCenter(view);
+    	borderPane.setRight(null);
     }
     @FXML
     void calListener(ActionEvent event) {
     	FxmlLoader scene = new FxmlLoader();
     	Pane view = scene.getPane("src/Calender.fxml");
     	borderPane.setCenter(view);
+    	borderPane.setRight(null);
     }
     
     @FXML
@@ -95,6 +97,13 @@ public class MainController implements Initializable{
     	Platform.exit();
     }
     
+    @FXML
+    void switchToSearch(ActionEvent event) {
+    	FxmlLoader scene = new FxmlLoader();
+    	Pane view = scene.getPane("src/Search.fxml");
+    	borderPane.setCenter(view);
+    }
+	
     void loadHomePage()
     {
     	FxmlLoader scene = new FxmlLoader();

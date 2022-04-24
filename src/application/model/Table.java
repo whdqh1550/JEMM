@@ -49,8 +49,8 @@ public class Table {
 				String checkIn;
 				String checkOut;
 				String isAvailable;
-				
-				if(hotelData[7].contains("FALSE"))
+				//System.out.println("Size: " +hotelData[7]);
+				if(hotelData[7].equalsIgnoreCase("FALSE"))
 				{
 					isAvailable = "N";
 					firstName = hotelData[1];
@@ -59,6 +59,7 @@ public class Table {
 					checkIn = hotelData[4];
 					checkOut = hotelData[5];
 					unAvailable++;
+					
 				}
 				else
 				{
