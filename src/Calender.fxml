@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="650.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalendarController">
+   <children>
+      <Label fx:id="monthDisplay" alignment="CENTER" layoutX="14.0" layoutY="64.0" prefHeight="70.0" prefWidth="615.0" text="MONTH" textAlignment="CENTER" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="64.0">
+         <font>
+            <Font size="56.0" />
+         </font>
+      </Label>
+      <HBox layoutX="2.0" layoutY="127.0" prefHeight="536.0" prefWidth="650.0">
+         <children>
+            <VBox prefHeight="530.0" prefWidth="92.0">
+               <children>
+                  <Label fx:id="Sunday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Sunday">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="b11" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d11" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a11" alignment="BOTTOM_CENTER" prefHeight="74.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b21" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d21" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a21" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b31" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d31" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a31" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b41" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d41" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a41" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b51" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d51" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a51" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b161" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d61" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a61" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="530.0" prefWidth="92.0">
+               <children>
+                  <Label fx:id="Monday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Monday">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="b12" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d12" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a12" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b22" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d22" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a22" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b32" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d32" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a32" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b42" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d42" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a42" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b52" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d52" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a52" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b62" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d62" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a62" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="530.0" prefWidth="92.0">
+               <children>
+                  <Label fx:id="Tuesday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Tuesday">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="b13" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d13" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a13" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b23" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d23" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a23" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b33" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d33" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a33" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b43" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d43" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a43" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b53" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d53" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a53" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b63" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d63" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a63" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="530.0" prefWidth="92.0">
+               <children>
+                  <Label fx:id="Wednesday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Wednesday">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="b14" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d14" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a14" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b24" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d24" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a24" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b34" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d34" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a34" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b44" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d44" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a44" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b54" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d54" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a54" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b64" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d64" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a64" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="530.0" prefWidth="92.0">
+               <children>
+                  <Label fx:id="Thursday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Thursday">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="b15" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d15" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a15" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b25" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d25" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a25" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b35" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d35" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a35" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b45" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d45" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a45" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b55" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d55" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a55" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b65" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d65" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a65" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="530.0" prefWidth="92.0">
+               <children>
+                  <Label fx:id="Friday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Friday">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="b16" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d16" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a16" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b26" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d26" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a26" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b36" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d36" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a36" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b46" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d46" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a46" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b56" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d56" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a56" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b166" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d67" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a67" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="530.0" prefWidth="92.0">
+               <children>
+                  <Label fx:id="Saturday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Saturday">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="b17" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d17" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a17" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b27" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d27" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a27" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b37" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d37" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a37" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b47" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d47" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a47" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b57" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d57" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a57" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="b67" prefHeight="76.0" prefWidth="156.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label fx:id="d66" alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="10">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="a66" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button layoutX="128.0" layoutY="85.0" mnemonicParsing="false" onAction="#prevMonth" text="&lt;-" />
+      <Button layoutX="487.0" layoutY="85.0" mnemonicParsing="false" onAction="#nextMonth" text="-&gt;" />
+      <Label fx:id="yearDisplay" alignment="CENTER" layoutX="53.0" layoutY="30.0" prefHeight="48.0" prefWidth="593.0" text="Year">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
