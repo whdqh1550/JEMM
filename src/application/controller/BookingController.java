@@ -14,7 +14,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.net.URL;
-import java.time.LocalDate;
+import java.time.LocalDate; 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,6 +23,14 @@ import java.util.ResourceBundle;
 import application.model.Data;
 
 public class BookingController implements Initializable {
+	/*
+	 * Booking controller will handle booking fxml page 
+	 * will store input texts, display room info texts and handle calling and editing csv file to new data
+	 * confirm booking function below will check if all inputs are right and entered, then call function to add
+	 * to the hashmap data struct and update the csv data with the inputed room information. Will clear boxes
+	 * afterwards
+	 * check availability function will show the information of a room to the user in text box output 
+	 */
 
     @FXML
     private AnchorPane mainPane;

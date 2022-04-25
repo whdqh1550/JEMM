@@ -74,9 +74,11 @@ public class MainController implements Initializable{
     @FXML
     void SwitchToHome(ActionEvent event) throws IOException {
     	loadHomePage();
-    	t = new Table();
+//    	t = new Table();
     	t.populateTable();
-    	System.out.println("tablee");
+    	availableNumLabel.setText(Integer.toString(t.getAvailable()));
+    	unavailableNumLabel.setText(Integer.toString(t.getUnAvailable()));
+    	totalRoomLabel.setText(Integer.toString(t.getAvailable() + t.getUnAvailable()));
     }
     
     
@@ -105,6 +107,7 @@ public class MainController implements Initializable{
     	FxmlLoader scene = new FxmlLoader();
     	Pane view = scene.getPane("src/Search.fxml");
     	borderPane.setCenter(view);
+    	borderPane.setRight(null);
     }
     @FXML
     void loadHomePage()
@@ -122,7 +125,6 @@ public class MainController implements Initializable{
     {
     	try {
 			t = new Table();
-			System.out.println("table");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

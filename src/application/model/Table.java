@@ -33,7 +33,9 @@ public class Table {
 		
 		FileReader readFile = new FileReader(file);
 		try(BufferedReader br = new BufferedReader(readFile))
-		{
+		{	
+			unAvailable = 0;
+			available = 0;
 			String line = br.readLine();
 			line = br.readLine();
 			//System.out.println(line);
@@ -58,7 +60,7 @@ public class Table {
 					phoneNumber = hotelData[3];
 					checkIn = hotelData[4];
 					checkOut = hotelData[5];
-					unAvailable++;
+					unAvailable++; 
 					
 				}
 				else

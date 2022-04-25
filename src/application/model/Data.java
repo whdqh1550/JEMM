@@ -19,6 +19,17 @@ import java.util.Set;
 import java.util.stream.Stream;
 
 public class Data {
+	/*
+	 * Data class will handle data storage of rooms in hashmap and initialized by reading csv file.
+	 * will then write to csv file and update hashmap when new information is entered. Couldnt get csvreader to work
+	 * so what I did was read all data in hashmap, update hashmap with new information then write it all to csv file.
+	 * couldve used properties but too far in before learning it. 
+	 * Load Data will handle reading from csv and initializing hashmap when application runs then addroominfo function
+	 * will handle updating data structure and csv file 
+	 * 
+	 * setters and getters for roomNums which is an arraylist of all room numbers and getData is used to get hashmap and
+	 * store locally elsewhere is code. 
+	 */
 	private static Map<String, ArrayList<String>> data = new HashMap<String, ArrayList<String>>(); //hashmap type map, takes string and arraylist of type string, to hold multiple values per key
 	private static ArrayList<String> roomNums = new ArrayList<String>();
 	private static int largestRoomNum;

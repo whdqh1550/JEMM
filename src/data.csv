@@ -1,7 +1,7 @@
 roomNum,firstName,lastName,phoneNum,dateStart,dateEnd,numGuests,isAvailable
 88,Memphis,Liu,265-897-9114,08-21-2022,08-26-2022,4,False
 89,,,,,,,True
-90,,,,,,,True
+90,John,Cena,845-485-4812,2022-05-17,2022-05-26,1,False
 91,Marcus,Castro,847-891-9505,01-15-2022,02-16-2022,2,False
 92,Chase,Cummings,769-899-9774,12-08-2022,12-27-2022,3,False
 93,,,,,,,True
@@ -9,7 +9,7 @@ roomNum,firstName,lastName,phoneNum,dateStart,dateEnd,numGuests,isAvailable
 95,Manuel,Day,448-629-9420,03-29-2022,04-24-2022,4,False
 96,,,,,,,True
 97,Kyrie,Fleming,125-395-9571,04-03-2022,04-12-2022,2,False
-98,,,,,,,True
+98,Marcos,Espinoza,954-485-4848,2022-03-28,2022-04-29,0,False
 10,Carlos,Graves,258-524-4069,10-10-2022,10-28-2022,2,False
 99,,,,,,,True
 11,Ivan,Pham,739-822-0110,03-19-2022,04-09-2022,4,False
@@ -17,7 +17,7 @@ roomNum,firstName,lastName,phoneNum,dateStart,dateEnd,numGuests,isAvailable
 13,Patrick,Hart,247-171-2927,01-17-2022,02-12-2022,3,False
 14,Simon,Li,206-667-3891,09-23-2022,10-03-2022,3,False
 15,Lorenzo,Chang,295-464-1725,12-21-2022,12-23-2022,4,False
-16,,,,,,,True
+16,Rodger,Ulis,484-484-4848,2022-01-10,2022-01-25,1,False
 17,Richard,Harrington,843-041-6213,01-04-2022,01-21-2022,4,False
 18,,,,,,,True
 19,Emanuel,Vaughn,100-556-3928,01-18-2022,01-28-2022,1,False
@@ -54,7 +54,7 @@ roomNum,firstName,lastName,phoneNum,dateStart,dateEnd,numGuests,isAvailable
 41,Elliot,Brewer,768-136-7552,11-16-2022,12-01-2022,4,False
 42,Charles,Castillo,278-758-7715,03-05-2022,03-10-2022,4,False
 43,,,,,,,True
-44,,,,,,,True
+44,William,Ortiz,484-152-2145,2022-04-12,2022-04-21,2,False
 45,Jaxton,Moran,428-178-2210,10-04-2022,10-27-2022,2,False
 46,Adan,Curtis,359-064-0718,12-21-2022,12-24-2022,1,False
 47,Kasen,Caldwell,261-860-1821,03-27-2022,04-19-2022,2,False
