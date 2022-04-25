@@ -11,10 +11,14 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import application.model.DayMonthYear;
 import application.model.Table;
+import application.model.monComp;
 
 public class CalendarController implements Initializable{
 
@@ -559,9 +563,11 @@ public class CalendarController implements Initializable{
 				}
 			
 			}
+			Collections.sort(avail, new monComp());
+			Collections.sort(availuntil, new monComp());
 			
 			for(int i = 0; i < avail.size(); i ++) {
-				if(aYear.size()<yearCounter+20) {
+				if(aYear.size()<yearCounter+30) {
 					aYear.add(availableMonth);
 					setaYear.add(outavailableMonth);
 				}
@@ -579,33 +585,7 @@ public class CalendarController implements Initializable{
 			
 			
 			
-		
-//			for(int i = 0 ; i < avail.size(); i++) {
-//				
-//				int repeat = stayDays(avail.get(i).getYear()-2022,avail.get(i).getMonth()-1,avail.get(i).getDay(),availuntil.get(i).getYear()-2022,availuntil.get(i).getMonth()-1,availuntil.get(i).getDay(),avail.get(i).getMonth()-1);
-//				System.out.println(repeat);
-//				System.out.println(avail.get(i).getMonth()+"-"+avail.get(i).getDay());
-//				System.out.println(availuntil.get(i).getMonth()+"-"+availuntil.get(i).getDay());
-//				for(int j = 0; j <=repeat;j++) {
-//					System.out.println("inside forloop");
-//
-//					int value = aYear.get(avail.get(i).getYear()-2022).get(avail.get(i).getMonth()-1).get(avail.get(i).getDay());
-//					System.out.println("assiging value ");
-//					
-//					value = value +1;
-//					System.out.println("value incremental");
-//					
-//					aYear.get(avail.get(i).getYear()-2022).get(avail.get(i).getMonth()-1).set(avail.get(i).getDay(), value);
-//					System.out.println("setting the value back into loc");
-//					
-//				}
-////				System.out.println(aYear.get(avail.get(i).getYear()-22).get(avail.get(i).getMonth()-1).get(avail.get(i).getDay()));
-//				
-//				
-//				
-//				
-//			}
-	
+
 			
 			for(int i = 0; i < availuntil.size(); i ++) {
 				if(outaYear.size()<yearCounter+10) {
@@ -630,115 +610,133 @@ public class CalendarController implements Initializable{
 				for(int j = 0; j < 12; j++) {
 					for(int k = 0 ;k < tDays[j];k++) {
 						setaYear.get(i).get(j).add(0);
+						
+					}
+				}
+			}
+		
+			
+	
+			arrayadder();
+			for(int i = 0 ; i < avail.size(); i++) {
+				
+				int repeat = stayDays(avail.get(i).getYear()-2022,avail.get(i).getMonth()-1,avail.get(i).getDay(),availuntil.get(i).getYear()-2022,availuntil.get(i).getMonth()-1,availuntil.get(i).getDay(),avail.get(i).getMonth()-1);
+				
+				for(int j = 0; j <=repeat;j++) {
+				
+					//System.out.println(aYear.get(avail.get(i).getYear()-2022).get(avail.get(i).getMonth()-1).get(avail.get(i).getDay()));
+					int value = aYear.get(avail.get(i).getYear()-2022).get(avail.get(i).getMonth()-1).get(avail.get(i).getDay());
+
+					value = value +1;
+
+					aYear.get(avail.get(i).getYear()-2022).get(avail.get(i).getMonth()-1).set(avail.get(i).getDay(), value);
+
+					
+				}
+				//System.out.println(aYear.get(avail.get(i).getYear()-2022).get(avail.get(i).getMonth()-1).get(avail.get(i).getDay()));
+				
+				
+				
+				
+			}
+			
+
+			
+
+//			for(int i = 0; i < setaYear.size();i++) {
+//				for(int j = 0; j < 12; j++) {
+//					for(int k = 0 ;k < tDays[j];k++) {
+//						System.out.println(setaYear.get(i).get(j).get(k));
+//						
+//					}
+//				}
+//			}
+//			for(int i = 0; i < setaYear.size();i++) {
+//				for(int j = 0; j < 12; j++) {
+//					for(int k = 0 ;k < tDays[j];k++) {
+//						setaYear.get(i).get(j).set(k, 0);
+//						
+//					}
+//				}
+//			}
+//		
+			
+		
+			
+			for(int i = 0 ; i < setaYear.size()-29;i++) {
+				
+				
+				for(int j = 0; j < setaYear.get(i).size();j++) {
+					
+					for(int k = 0 ; k <tDays[j];k++) {
+						
+						if(aYear.get(i).get(j).get(k)!= 0) {
+							int counter = 0;
+							int fInc = 0;
+							int sInc = 0;
+							int tInc = 0;
+							int ktemp = k;
+							
+							System.out.println(aYear.get(i).get(j).get(k));
+							while (counter < aYear.get(i).get(j).get(k)) {
+								
+								if(k+fInc >= tDays[j+sInc]) {
+									ktemp=0;
+									fInc=0;
+								}
+								if(j+sInc >=12 ) {
+									tInc++;
+									sInc = 0;
+								}
+								int t = i+tInc;
+								int s = j+sInc;
+								int f = ktemp+fInc;
+								//System.out.print(t+"-");
+								//System.out.print(s+"-");
+								//System.out.print(f+"=");
+								int value = setaYear.get(t).get(s).get(f);
+								
+								System.out.println(t+"-"+s+"-"+f);
+						
+								value = value +1;
+								System.out.println(value);
+								
+								setaYear.get(t).get(s).set(f, value);
+								fInc++;
+								counter++;
+							}
+						}
+						
 					}
 				}
 			}
 			
 			
-//			for(int i = 0 ; i < setaYear.size();i++) {
-//				
-//				for(int j = 0; j < setaYear.get(i).size();j++) {
-//					
-//					for(int k = 0 ; k <tDays[j];k++) {
-//						
-//						if(aYear.get(i).get(j).get(k)!= 0) {
-//							int counter = 0;
-//							int fInc = 0;
-//							int sInc = 0;
-//							int tInc = 0;
-//							int ktemp = k;
-//							while (counter < aYear.get(i).get(j).get(k)) {
-//								
-//								if(k+fInc >= tDays[j+sInc]) {
-//									ktemp=0;
-//									fInc=0;
-//								}
-//								if(j+sInc >=12 ) {
-//									tInc++;
-//									sInc = 0;
-//								}
-//								
-//								int value = setaYear.get(i+tInc).get(j+sInc).get(ktemp+fInc);
-//								value = value +1;
-//								setaYear.get(i+tInc).get(j+sInc).set(k+fInc, value);
-//								fInc++;
-//								counter++;
-//							}
-//						}
-//					
-//					
-//					
-//					
+//			for(int i = 3; i < 12;i++) {
+//				for(int j = 0; j < 12; j++) {
+//					for(int k = 0 ;k < tDays[j];k++) {
+//						System.out.println(setaYear.get(0).get(0).get(0));
+//						System.out.println(setaYear.get(i).get(j).get(k));
+//						System.out.println(i+"-"+j+"-"+k);
+//						setaYear.get(i).get(j).set(k, 0);
+//						System.out.println(setaYear.get(i).get(j).get(k));
+//						System.out.println(setaYear.get(0).get(0).get(0));
 //						
 //					}
 //				}
 //			}
-//			
 			
-			
-			
-//			for(int i = 0 ; i < setaYear.size();i++) {
-//				for(int j = 0; j < setaYear.get(i).size();j++) {
-//					for(int k = 0 ; k <tDays[j];k++) {
-//						
-//						int recycle = aYear.get(i).get(j).get(k);
-//						if(recycle!=0) {
-//							
-//							int tempk = k;
-//							int firstIncreaser = 0;
-//							int secondIncreaser = 0;
-//							int fakeYear=0;
-//							
-//							
-//							for(int z = 0 ; z < recycle; z++) {
-//								int tPlaceHolder = fakeYear;
-//								int sPlaceHolder = secondIncreaser+j;
-//								int fPlaceHolder = tempk+firstIncreaser;
-//						
-//								if(firstIncreaser+k >= tDays[j]) {
-//									firstIncreaser = 0;
-//									secondIncreaser ++;
-//									tempk = 0;
-//								}
-//								if(secondIncreaser+j >= 12) {
-//									secondIncreaser = 0;
-//									fakeYear++;
-//								}
-//								
-//							    int value = setaYear.get(tPlaceHolder).get(sPlaceHolder).get(fPlaceHolder);
-//							    
-//								
-//								value = value +1;
-//								setaYear.get(tPlaceHolder).get(sPlaceHolder).set(fPlaceHolder, value);
-//								firstIncreaser++;
-//								
-//								
-//								
-//							}
-//							
-//
-//							
-//						}
-//						
+//			for(int i = 0; i < 12;i++) {
+//				for(int j = 0; j < 12; j++) {
+//					for(int k = 0 ;k < tDays[j];k++) {
+//						System.out.print( i + "-"+ j+"-"+k +" = " );
+//						System.out.println(setaYear.get(i).get(j).get(k));
 //						
 //					}
-//						
-//					
 //				}
 //			}
-			
-			
-
-			
-//			for(int i = 0 ; i < availuntil.size(); i++) {
-//				int value = outaYear.get(availuntil.get(i).getYear()-22).get(availuntil.get(i).getMonth()-1).get(availuntil.get(i).getDay());
-//				value = value +1;
-//				outaYear.get(availuntil.get(i).getYear()-22).get(availuntil.get(i).getMonth()-1).set(availuntil.get(i).getDay(), value);
-//			}
-//			
 		
-			
-			
+		
 			
 			
 			
@@ -752,7 +750,7 @@ public class CalendarController implements Initializable{
 		monthWriter(month);
 		dateWriter(month,date);
 		availableWriter(month);
-			
+	
 
 		
 	}
@@ -763,14 +761,12 @@ public class CalendarController implements Initializable{
 		int day = 0;
 		int monthdays = 0;
 		
-		if(OutMonth > InMonth+1) {
-			for(int i = 0; i < OutMonth-InMonth;i++) {
-				monthdays = tDays[OutMonth-i]+monthdays;
-			}
-			day = monthdays+(tDays[InMonth]-InDay)+OutDay;
+		
+		if(OutMonth > InMonth) {
+			day = tDays[InMonth] - InDay + OutDay;
 		}
 		else {
-			day = (tDays[InMonth]-InDay)+OutDay;
+			day = OutDay - InDay;
 		}
     	
     	return day;
@@ -782,106 +778,13 @@ public class CalendarController implements Initializable{
 		int [] tDays = {31,28,31,30,31,30,31,31,30,31,30,31};
 		int [] LeaptDays = {31,29,31,30,31,30,31,31,30,31,30,31};
 		int counter12 = 1;
+		
 
-		arrayadder();
-		for(int i = 0 ; i < avail.size(); i++) {
-			
-			int repeat = stayDays(avail.get(i).getYear()-2022,avail.get(i).getMonth()-1,avail.get(i).getDay(),availuntil.get(i).getYear()-2022,availuntil.get(i).getMonth()-1,availuntil.get(i).getDay(),avail.get(i).getMonth()-1);
-			
-			for(int j = 0; j <=repeat;j++) {
-			
-				int value = aYear.get(avail.get(i).getYear()-2022).get(avail.get(i).getMonth()-1).get(avail.get(i).getDay());
 
-				value = value +1;
 
-				aYear.get(avail.get(i).getYear()-2022).get(avail.get(i).getMonth()-1).set(avail.get(i).getDay(), value);
-
-				
-			}
-//			System.out.println(aYear.get(avail.get(i).getYear()-22).get(avail.get(i).getMonth()-1).get(avail.get(i).getDay()));
-			
-			
-			
-			
-		}
-		for(int i = 0 ; i < setaYear.size();i++) {
-			
-			for(int j = 0; j < setaYear.get(i).size();j++) {
-				
-				for(int k = 0 ; k <tDays[j];k++) {
-					
-					if(aYear.get(i).get(j).get(k)!= 0) {
-						int counter = 0;
-						int fInc = 0;
-						int sInc = 0;
-						int tInc = 0;
-						int ktemp = k;
-						while (counter < aYear.get(i).get(j).get(k)) {
-							
-							if(k+fInc >= tDays[j+sInc]) {
-								ktemp=0;
-								fInc=0;
-							}
-							if(j+sInc >=12 ) {
-								tInc++;
-								sInc = 0;
-							}
-							
-							int value = setaYear.get(i+tInc).get(j+sInc).get(ktemp+fInc);
-							value = value +1;
-							setaYear.get(i+tInc).get(j+sInc).set(k+fInc, value);
-							fInc++;
-							counter++;
-						}
-					}
-				
-				
-				
-				
-					
-				}
-			}
-		}			
-		for(int i = 0 ; i < setaYear.size();i++) {
-			
-			for(int j = 0; j < setaYear.get(i).size();j++) {
-				
-				for(int k = 0 ; k <tDays[j];k++) {
-					
-					if(aYear.get(i).get(j).get(k)!= 0) {
-						int counter = 0;
-						int fInc = 0;
-						int sInc = 0;
-						int tInc = 0;
-						int ktemp = k;
-						while (counter < aYear.get(i).get(j).get(k)) {
-							
-							if(k+fInc >= tDays[j+sInc]) {
-								ktemp=0;
-								fInc=0;
-							}
-							if(j+sInc >=12 ) {
-								tInc++;
-								sInc = 0;
-							}
-							
-							int value = setaYear.get(i+tInc).get(j+sInc).get(ktemp+fInc);
-							value = value +1;
-							setaYear.get(i+tInc).get(j+sInc).set(k+fInc, value);
-							fInc++;
-							counter++;
-						}
-					}
-				
-				
-				
-				
-					
-				}
-			}
-		}
 		
 		
+
 		
 	
 		
@@ -899,6 +802,7 @@ public class CalendarController implements Initializable{
 				}
 				else {
 				
+					
 				//                                               0            11             31
 					aCalendar.get(i).setText(""+setaYear.get(year-2022).get(cmonth-1).get(counter12)+"/"+totalRoom);//
 					counter12++;// brings the date that matches with counter, cause counter is the date. 
@@ -918,24 +822,20 @@ public class CalendarController implements Initializable{
 					aCalendar.get(i).setText("");
 				}
 				else {
-				
-				
-					aCalendar.get(i).setText(""+setaYear.get(year-2022).get(cmonth-1).get(counter12)+"/"+totalRoom);//
+					int f = year-2022;
+					int s = cmonth -1;
+					
+					//System.out.println((f)+"-"+(s)+"-"+counter12);
+					aCalendar.get(i).setText(""+setaYear.get(f).get(s).get(counter12)+"/"+totalRoom);//
 					counter12++;// brings the date that matches with counter, cause counter is the date. 
+					
 		
 				}
 			}
 			
 		}
 
-		for(int i = 0 ; i < setaYear.get(i).size();i++) {
-			for (int j = 0; j <12;j++) {
-				for(int k = 0; k < aYear.get(i).get(j).get(k);k++) {
-					System.out.println(setaYear.get(i)+" - "+setaYear.get(i).get(j)+" - "+setaYear.get(i).get(j).get(k));
-					System.out.println("hello");
-				}
-			}
-		}
+		
 	}
 
 	void monthWriter(int dmonth) {
