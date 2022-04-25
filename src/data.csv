@@ -5,7 +5,7 @@ roomNum,firstName,lastName,phoneNum,dateStart,dateEnd,numGuests,isAvailable
 91,Marcus,Castro,847-891-9505,01-15-2022,02-16-2022,2,False
 92,Chase,Cummings,769-899-9774,12-08-2022,12-27-2022,3,False
 93,,,,,,,True
-94,,,,,,,True
+94,Mario,Ortiz,956-596-5486,2022-04-04,2022-04-21,2,False
 95,Manuel,Day,448-629-9420,03-29-2022,04-24-2022,4,False
 96,,,,,,,True
 97,Kyrie,Fleming,125-395-9571,04-03-2022,04-12-2022,2,False
@@ -97,5 +97,5 @@ roomNum,firstName,lastName,phoneNum,dateStart,dateEnd,numGuests,isAvailable
 83,,,,,,,True
 84,Mario,Alday,985-784-4848,2022-04-13,2022-05-05,2,False
 85,Elijah,Owens,879-318-8380,09-24-2022,10-17-2022,2,False
-86,,,,,,,True
+86,Erik,Sistos,393-393-3939,2022-04-11,2022-04-29,69,False
 87,,,,,,,True
