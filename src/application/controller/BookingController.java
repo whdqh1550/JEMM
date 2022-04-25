@@ -66,10 +66,7 @@ public class BookingController implements Initializable {
     	  error.showAndWait();
     	  return;
         }
-//        System.out.println("thisaf");
         ArrayList<String> roomInfo = new ArrayList<String>();	
-//        Data var = new Data();
-//        var.loadData();
         
         roomInfo.add(name[0]);
         roomInfo.add(name[1]);
@@ -77,13 +74,14 @@ public class BookingController implements Initializable {
         roomInfo.add(dateStartString.toString());
         roomInfo.add(dateEndString.toString());
         roomInfo.add(guestNum);
-        roomInfo.add("FALSE");
+        roomInfo.add("False");
         System.out.println(roomNum);
         
         Data.addRoomInfo(roomNum,  roomInfo); //call addItem function in model class
 //        Data.loadData();
         nameField.clear();
         phoneNumberField.clear();
+        guestsField.clear();
 }	
 
     @FXML
