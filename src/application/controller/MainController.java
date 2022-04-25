@@ -74,6 +74,9 @@ public class MainController implements Initializable{
     @FXML
     void SwitchToHome(ActionEvent event) throws IOException {
     	loadHomePage();
+    	t = new Table();
+    	t.populateTable();
+    	System.out.println("tablee");
     }
     
     
@@ -103,7 +106,7 @@ public class MainController implements Initializable{
     	Pane view = scene.getPane("src/Search.fxml");
     	borderPane.setCenter(view);
     }
-	
+    @FXML
     void loadHomePage()
     {
     	FxmlLoader scene = new FxmlLoader();
@@ -119,6 +122,7 @@ public class MainController implements Initializable{
     {
     	try {
 			t = new Table();
+			System.out.println("table");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

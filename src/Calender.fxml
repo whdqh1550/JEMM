@@ -6,16 +6,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalendarController">
+<AnchorPane prefHeight="650.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalendarController">
    <children>
-      <Label fx:id="monthDisplay" alignment="CENTER" layoutX="292.0" layoutY="63.0" text="MONTH" textAlignment="CENTER" AnchorPane.leftAnchor="292.0" AnchorPane.rightAnchor="292.0">
+      <Label fx:id="monthDisplay" alignment="CENTER" layoutX="14.0" layoutY="64.0" prefHeight="70.0" prefWidth="615.0" text="MONTH" textAlignment="CENTER" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="64.0">
          <font>
             <Font size="56.0" />
          </font>
       </Label>
-      <HBox layoutX="2.0" layoutY="127.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="127.0">
+      <HBox layoutX="2.0" layoutY="127.0" prefHeight="536.0" prefWidth="650.0">
          <children>
-            <VBox>
+            <VBox prefHeight="530.0" prefWidth="92.0">
                <children>
                   <Label fx:id="Sunday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Sunday">
                      <font>
@@ -29,7 +29,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a11" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a11" alignment="BOTTOM_CENTER" prefHeight="74.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -43,7 +43,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a21" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a21" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -57,7 +57,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a31" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a31" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -71,7 +71,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a41" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a41" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -85,7 +85,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a51" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a51" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -99,7 +99,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a61" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a61" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -108,7 +108,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox>
+            <VBox prefHeight="530.0" prefWidth="92.0">
                <children>
                   <Label fx:id="Monday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Monday">
                      <font>
@@ -122,7 +122,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a12" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a12" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -136,7 +136,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a22" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a22" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -150,7 +150,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a32" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a32" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -164,7 +164,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a42" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a42" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -178,7 +178,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a52" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a52" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -192,7 +192,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a62" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a62" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -201,7 +201,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox>
+            <VBox prefHeight="530.0" prefWidth="92.0">
                <children>
                   <Label fx:id="Tuesday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Tuesday">
                      <font>
@@ -215,7 +215,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a13" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a13" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -229,7 +229,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a23" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a23" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -243,7 +243,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a33" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a33" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -257,7 +257,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a43" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a43" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -271,7 +271,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a53" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a53" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -285,7 +285,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a63" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a63" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -294,7 +294,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox>
+            <VBox prefHeight="530.0" prefWidth="92.0">
                <children>
                   <Label fx:id="Wednesday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Wednesday">
                      <font>
@@ -308,7 +308,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a14" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a14" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -322,7 +322,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a24" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a24" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -336,7 +336,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a34" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a34" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -350,7 +350,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a44" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a44" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -364,7 +364,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a54" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a54" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -378,7 +378,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a64" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a64" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -387,7 +387,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox>
+            <VBox prefHeight="530.0" prefWidth="92.0">
                <children>
                   <Label fx:id="Thursday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Thursday">
                      <font>
@@ -401,7 +401,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a15" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a15" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -415,7 +415,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a25" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a25" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -429,7 +429,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a35" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a35" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -443,7 +443,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a45" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a45" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -457,7 +457,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a55" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a55" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -471,7 +471,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a65" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a65" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -480,7 +480,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox>
+            <VBox prefHeight="530.0" prefWidth="92.0">
                <children>
                   <Label fx:id="Friday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Friday">
                      <font>
@@ -494,7 +494,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a16" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a16" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -508,7 +508,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a26" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a26" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -522,7 +522,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a36" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a36" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -536,7 +536,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a46" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a46" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -550,7 +550,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a56" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a56" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -564,7 +564,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a67" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a67" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -573,7 +573,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox>
+            <VBox prefHeight="530.0" prefWidth="92.0">
                <children>
                   <Label fx:id="Saturday" alignment="CENTER" prefHeight="56.0" prefWidth="92.0" text="Saturday">
                      <font>
@@ -587,7 +587,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a17" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a17" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -601,7 +601,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a27" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a27" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -615,7 +615,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a37" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a37" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -629,7 +629,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a47" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a47" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -643,7 +643,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a57" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a57" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -657,7 +657,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="a66" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="74.0" text="10/25">
+                        <Label fx:id="a66" alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="115.0" text="10/25">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -668,9 +668,9 @@
             </VBox>
          </children>
       </HBox>
-      <Button layoutX="103.0" layoutY="78.0" maxHeight="25.0" maxWidth="50.0" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#prevMonth" prefHeight="25.0" prefWidth="50.0" text="&lt;-" />
-      <Button layoutX="1241.0" layoutY="78.0" maxHeight="25.0" maxWidth="50.0" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#nextMonth" prefHeight="25.0" prefWidth="50.0" text="-&gt;" />
-      <Label fx:id="yearDisplay" alignment="CENTER" layoutX="16.0" layoutY="35.0" text="Year" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0">
+      <Button layoutX="128.0" layoutY="85.0" mnemonicParsing="false" onAction="#prevMonth" text="&lt;-" />
+      <Button layoutX="487.0" layoutY="85.0" mnemonicParsing="false" onAction="#nextMonth" text="-&gt;" />
+      <Label fx:id="yearDisplay" alignment="CENTER" layoutX="53.0" layoutY="30.0" prefHeight="48.0" prefWidth="593.0" text="Year">
          <font>
             <Font size="39.0" />
          </font>

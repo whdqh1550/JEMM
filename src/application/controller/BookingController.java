@@ -43,44 +43,46 @@ public class BookingController implements Initializable {
 
     @FXML
     void ConfirmBookingPressed(ActionEvent event) throws Exception {
-    	String name=  nameField.getText().toString();
-   	 	String phoneNumber= phoneNumberField.getText().toString();
-   	 	String roomNum="";
-   	 	String guestNum=guestsField.getText().toString();
-   	 	LocalDate dateStartString = dateStart.getValue();
-   	 	LocalDate dateEndString = dateEnd.getValue();
-   	 	System.out.println(dateStartString);
-	 	ObservableList listofItems=listView.getSelectionModel().getSelectedItems();
-	 	for(Object item : listofItems){
-	 		roomNum+=String.format("%s", (String)item);
-	 	}
-    	Alert error= new Alert(AlertType.ERROR);
-    	if(roomNum.length() == 0) {
-    		error.setContentText("Select a room!");
-    		error.showAndWait();
-    		return;
-    	}
-		if(name.length() == 0 || phoneNumber.length() == 0 || guestNum.length() == 0
-				|| dateStart.getValue() == null || dateEnd.getValue() == null) {
-			error.setContentText("Fill in all boxes!");
-			error.showAndWait();
-			return;
-		}
-    	System.out.println("thisaf");
-    	ArrayList<String> roomInfo = new ArrayList<String>();
-    	Data var = new Data();
-    	var.loadData();
-    	
-   	 	roomInfo.add(name);
-   	 	roomInfo.add(phoneNumber);	
-   	 	
-   	 	System.out.println(roomNum);
-   	 	
-   	  	var.addRoomInfo(roomNum,  roomInfo); //call addItem function in model class
-   	 	Data.loadData();
-   	  	nameField.clear();
-   	  	phoneNumberField.clear(); 
-    }
+    	String[] name=  nameField.getText().toString().split(" ");
+        String phoneNumber= phoneNumberField.getText().toString();
+        String roomNum="";
+        String guestNum=guestsField.getText().toString();
+        LocalDate dateStartString = dateStart.getValue();
+        LocalDate dateEndString = dateEnd.getValue();
+        System.out.println(dateStartString);
+        ObservableList listofItems=listView.getSelectionModel().getSelectedItems();
+        for(Object item : listofItems){
+        	roomNum+=String.format("%s", (String)item);
+        }
+        Alert error= new Alert(AlertType.ERROR);
+        if(roomNum.length() == 0) {
+    	  error.setContentText("Select a room!");
+    	  error.showAndWait();
+    	  return;
+        }
+        if(name.length == 0 || phoneNumber.length() == 0 || guestNum.length() == 0
+          || dateStart.getValue() == null || dateEnd.getValue() == null) {
+    	  error.setContentText("Fill in all boxes!");
+    	  error.showAndWait();
+    	  return;
+        }
+        ArrayList<String> roomInfo = new ArrayList<String>();	
+        
+        roomInfo.add(name[0]);
+        roomInfo.add(name[1]);
+        roomInfo.add(phoneNumber);  
+        roomInfo.add(dateStartString.toString());
+        roomInfo.add(dateEndString.toString());
+        roomInfo.add(guestNum);
+        roomInfo.add("False");
+        System.out.println(roomNum);
+        
+        Data.addRoomInfo(roomNum,  roomInfo); //call addItem function in model class
+//        Data.loadData();
+        nameField.clear();
+        phoneNumberField.clear();
+        guestsField.clear();
+}	
 
     @FXML
     void CheckAvailabilityPressed(ActionEvent event) {
