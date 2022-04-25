@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.SearchController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="382.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.SearchController">
    <children>
-      <AnchorPane layoutX="-8.0" layoutY="-8.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="0.0">
+      <AnchorPane layoutX="-8.0" layoutY="-8.0" prefHeight="425.0" prefWidth="382.0">
          <children>
             <TextField fx:id="userInput" layoutX="27.0" layoutY="41.0" promptText="Type here" />
             <Button fx:id="searchButton" layoutX="222.0" layoutY="41.0" mnemonicParsing="false" onAction="#searchAction" text="Search" />

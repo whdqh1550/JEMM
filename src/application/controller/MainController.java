@@ -130,8 +130,8 @@ public class MainController implements Initializable{
 			e.printStackTrace();
 		}
     	
-    	availableNumLabel.setText(Integer.toString(t.getUnAvailable()));
-    	unavailableNumLabel.setText(Integer.toString(t.getAvailable()));
+    	availableNumLabel.setText(Integer.toString(t.getAvailable()));
+    	unavailableNumLabel.setText(Integer.toString(t.getUnAvailable()));
     	totalRoomLabel.setText(Integer.toString(t.getAvailable() + t.getUnAvailable()));
     	loadHomePage();
     }
