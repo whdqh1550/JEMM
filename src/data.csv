@@ -1,6 +1,6 @@
 roomNum,firstName,lastName,phoneNum,dateStart,dateEnd,numGuests,isAvailable
 88,Memphis,Liu,265-897-9114,08-21-2022,08-26-2022,4,False
-89,,,,,,,True
+89,Jongbo,Im,123-123-12333,2022-04-08,2022-04-12,2,False
 90,John,Cena,845-485-4812,2022-05-17,2022-05-26,1,False
 91,Marcus,Castro,847-891-9505,01-15-2022,02-16-2022,2,False
 92,Chase,Cummings,769-899-9774,12-08-2022,12-27-2022,3,False

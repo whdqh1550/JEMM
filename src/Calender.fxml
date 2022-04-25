@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="650.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalendarController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalendarController">
    <children>
       <Label fx:id="monthDisplay" alignment="CENTER" layoutX="14.0" layoutY="64.0" prefHeight="70.0" prefWidth="615.0" text="MONTH" textAlignment="CENTER" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="64.0">
          <font>
             <Font size="56.0" />
          </font>
       </Label>
-      <HBox layoutX="2.0" layoutY="127.0" prefHeight="536.0" prefWidth="650.0">
+      <HBox layoutX="2.0" layoutY="127.0" prefHeight="536.0" prefWidth="650.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <VBox prefHeight="530.0" prefWidth="92.0">
                <children>
@@ -669,8 +669,8 @@
          </children>
       </HBox>
       <Button layoutX="128.0" layoutY="85.0" mnemonicParsing="false" onAction="#prevMonth" text="&lt;-" />
-      <Button layoutX="487.0" layoutY="85.0" mnemonicParsing="false" onAction="#nextMonth" text="-&gt;" />
-      <Label fx:id="yearDisplay" alignment="CENTER" layoutX="53.0" layoutY="30.0" prefHeight="48.0" prefWidth="593.0" text="Year">
+      <Button layoutX="555.0" layoutY="86.0" mnemonicParsing="false" onAction="#nextMonth" text="-&gt;" />
+      <Label fx:id="yearDisplay" alignment="CENTER" layoutX="57.0" layoutY="28.0" prefHeight="48.0" prefWidth="593.0" text="Year">
          <font>
             <Font size="39.0" />
          </font>
