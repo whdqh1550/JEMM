@@ -16,11 +16,11 @@
          </font></Label>
       <HBox layoutY="68.0" prefHeight="717.0" prefWidth="800.0">
          <children>
-            <ListView fx:id="listView" prefHeight="696.0" prefWidth="331.0" />
+            <ListView fx:id="listView" maxHeight="600.0" prefHeight="719.0" prefWidth="344.0" />
             <AnchorPane prefHeight="732.0" prefWidth="467.0">
                <children>
-                  <Button layoutX="50.0" layoutY="645.0" mnemonicParsing="false" onAction="#CheckAvailabilityPressed" text="Check Availability" />
-                  <Button layoutX="262.0" layoutY="645.0" mnemonicParsing="false" onAction="#ConfirmBookingPressed" text="Confirm Booking" />
+                  <Button layoutX="49.0" layoutY="551.0" mnemonicParsing="false" onAction="#CheckAvailabilityPressed" text="Check Availability" />
+                  <Button layoutX="261.0" layoutY="551.0" mnemonicParsing="false" onAction="#ConfirmBookingPressed" text="Confirm Booking" />
                   <TextField fx:id="nameField" layoutX="177.0" layoutY="250.0" prefHeight="31.0" prefWidth="272.0" />
                   <TextField fx:id="phoneNumberField" layoutX="177.0" layoutY="289.0" prefHeight="31.0" prefWidth="272.0" />
                   <Label alignment="CENTER" layoutX="4.0" layoutY="254.0" prefHeight="31.0" prefWidth="163.0" text="Name" />

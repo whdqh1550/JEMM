@@ -66,10 +66,7 @@ public class BookingController implements Initializable {
     	  error.showAndWait();
     	  return;
         }
-//        System.out.println("thisaf");
         ArrayList<String> roomInfo = new ArrayList<String>();	
-//        Data var = new Data();
-//        var.loadData();
         
         roomInfo.add(name[0]);
         roomInfo.add(name[1]);
