@@ -77,13 +77,14 @@ public class BookingController implements Initializable {
         roomInfo.add(dateStartString.toString());
         roomInfo.add(dateEndString.toString());
         roomInfo.add(guestNum);
-        roomInfo.add("FALSE");
+        roomInfo.add("False");
         System.out.println(roomNum);
         
         Data.addRoomInfo(roomNum,  roomInfo); //call addItem function in model class
 //        Data.loadData();
         nameField.clear();
         phoneNumberField.clear();
+        guestsField.clear();
 }	
 
     @FXML

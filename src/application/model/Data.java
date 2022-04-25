@@ -15,6 +15,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+import java.util.Set;
 import java.util.stream.Stream;
 
 public class Data {
@@ -23,11 +24,13 @@ public class Data {
 //	private static HashMap<String, String> h1=new HashMap<String,String>();
 //	private static int csvCurrentLine = 10;
 	private static ArrayList<String> roomNums = new ArrayList<String>();
+	private static int largestRoomNum;
+	private static ArrayList<String> readCSV = new ArrayList<String>();
 	public static void addRoomInfo (String room, ArrayList<String> roomInfo) throws Exception{
 		ArrayList<String> checkRoomAvail = new ArrayList<String>();
 		checkRoomAvail = data.get(room);
 //		System.out.println(checkRoomAvail.get(6));
-		if(checkRoomAvail.get(6).compareTo("False") == 0) {
+		if(checkRoomAvail.get(6).compareTo("False") == 0) { //check if room is available
 			System.out.println("room already taken");
 			return;
 		} 
@@ -35,20 +38,67 @@ public class Data {
 //		data.put(room, roomInfo); //adding to data structure 
 		System.out.println("Room booked: " + room +"\tRoom information: "+ roomInfo);
 //		
-//		File dir = new File("src/data.csv");
-//		String loc = dir.getCanonicalPath();
-// 
-//		FileWriter fstream = new FileWriter(loc, true);
-//		BufferedWriter out = new BufferedWriter(fstream);
-//		String toCSV = "";
+		
+ 
+//		FileReader read = new FileReader(loc);
+//		read.read();
+//		System.out.println(read);
+		for (int i = 0; i < roomInfo.size(); i++) { //update arrayList with new info
+			checkRoomAvail.set(i, roomInfo.get(i));
+		}
+		data.put(room,  checkRoomAvail); //update hashmap data with new info booked
+		
+		File dir = new File("src/data.csv");
+		String loc = dir.getCanonicalPath();
+		FileWriter fstream = new FileWriter(loc);
+		BufferedWriter out = new BufferedWriter(fstream);
+		
 //		toCSV += room;
 //		for (int i = 0; i < roomInfo.size(); ++i) {
 //			toCSV += ","+roomInfo.get(i);
 //		}	
+		String[] csvHeaders = new String[] {"firstName","lastName","phoneNum",
+		                       "dateStart",	"dateEnd","numGuests", "isAvailable"};
+		String toCSV = "roomNum";
+		for (int i = 0; i < csvHeaders.length; i++) {
+			toCSV += ","+csvHeaders[i];
+		}
+		out.write(toCSV);
+		out.newLine(); 
+		
+		Iterator iterator = data.entrySet().iterator();
+        while (iterator.hasNext()) {
+        	Map.Entry me2 = (Map.Entry) iterator.next();
+//        	System.out.println("Room: "+me2.getKey() + "  RoomInfo: " + me2.getValue());
+        	toCSV = "";
+        	String checkIfStringData = me2.getKey().toString();
+        	if( checkIfStringData.compareTo("roomNum") ==0){
+        		continue;
+        	}
+			toCSV += me2.getKey().toString(); //add room num to string
+			
+			ArrayList<String> getKeyData = (ArrayList<String>) me2.getValue();
+			for (int i = 0; i < roomInfo.size(); ++i) {
+				toCSV += ","+ getKeyData.get(i);
+			}	
+			
+			System.out.println(toCSV);
+			out.write(toCSV);
+			out.newLine(); 
+        } 
+//		for (int i = 0; i < largestRoomNum; i++) {
+//			toCSV = "";
+//			toCSV += room;
+//			toCSV += ","+roomInfo.get(i);
+//			out.write(toCSV);
+//			out.newLine();
+//		}
 //		out.write(toCSV);
 //		out.newLine();
+		out.close();
 //		loadData();
-//		out.close();
+//		Table.populateTable();
+		
 
 	}
 	public static ArrayList<String> getRoomNums() {
@@ -68,7 +118,7 @@ public class Data {
 		BufferedReader buffer = new BufferedReader(stream);
 		String line;
 		String room = "";
-		int largestRoomNum = 0;
+//		int largestRoomNum = 0;
 		while((line = buffer.readLine()) != null) {
 			ArrayList<String> csvDataArray = new ArrayList<String>();
 			String [] csvLine = {}; //array to split the csv information 
